@@ -23,16 +23,16 @@ menuOptions.forEach((product) => {
 function MenuCompleto() {
   listaForEach.innerHTML = completeList;
   ValueTotal.innerHTML = "";
-} CompleteMenu.addEventListener("click", MenuCompleto);
+}
 
 // Exibir todos os produtos na tela com 10% de desconto
 menuOptions.map((product) => {
-  const desconto = (product.price + product.price) / 10;
+  const desconto = product.price * 0.9
   discountItems += `
     <li>
         <img class="foods-img" src=${product.src}>
         <p>${product.name}</p>
-        <p class="item-price">R$ ${product.price - desconto}</p>
+        <p class="item-price">R$ ${desconto}</p>
     </li>
   `;
 });
@@ -40,7 +40,7 @@ menuOptions.map((product) => {
 function showDescontsList() {
   listaForEach.innerHTML = discountItems;
   ValueTotal.innerHTML = "";
-} DayDiscount.addEventListener("click", showDescontsList);
+}
 
 // Exibir o valor total de todos os produtos na tela
 const TotalProducts = menuOptions.reduce((acc, TotalValueProducts) => {
@@ -53,7 +53,7 @@ R$ ${TotalProducts}</p>`;
 function ShowTotalValues() {
   ValueTotal.innerHTML = ValueTotalForItens;
   listaForEach.innerHTML = "";
-} MaxValue.addEventListener("click", ShowTotalValues);
+}
 
 // Exibir Apenas Lanches Veganos
 menuOptions.filter((product) => {
@@ -71,4 +71,9 @@ menuOptions.filter((product) => {
 function VeganLaunch() {
   ValueTotal.innerHTML = "";
   listaForEach.innerHTML = VeganFoodsList;
-} VeganFoods.addEventListener("click", VeganLaunch);
+}
+
+DayDiscount.addEventListener("click", showDescontsList);
+VeganFoods.addEventListener("click", VeganLaunch);
+CompleteMenu.addEventListener("click", MenuCompleto);
+MaxValue.addEventListener("click", ShowTotalValues);
