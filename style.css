@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #0d1800 50%, #32037c);
+  background-repeat: no-repeat;
+  min-height: 100vh; /*! Com isso eu consegui definir o COLOR do background na tela toda */
+  margin-bottom: 30px;
+}
+
+.container-buttons{
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 0;
+}
+
+.container-buttons:hover > :not(:hover){
+  opacity: .4;
+}
+
+button {
+  background-color: #8133ff;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 110px;
+  height: 60px;
+  border-radius: 30% 30% 80% 80%;
+  cursor: pointer;  
+  transition: .3s;
+}
+
+button:hover {
+  background-color: #ffee00;
+  box-shadow: 0 0 30px #ffee00, inset 0 0 50px #ffee00;
+  text-shadow: 0 0 15px #ffee00;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+button:active{
+  background-color: #ffae00;
+  box-shadow: 0 0 50px #ffae00, inset 0 0 50px #ffae00;
+  text-shadow: 0 0 15px #ffae00;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.total-value {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  text-shadow: 0 0 40px #ffee00, 0 0 50px #ffae00 ;
+}
+
+ul{
+  list-style: none;
+  display: grid;
+  grid-template-columns: 200px 200px 200px ;
+  gap: 40px;
+  justify-content: center;
+  transform-box: 3s;
+}
+
+li {
+  border: 2px solid #8133ff;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #8133ff41;
+  font-weight: bold;
+  filter: grayscale(100%);
+  transition: all 0.5s ease-in-out;
+}
+
+li:hover{
+  background-color: #8133ff;
+  box-shadow: 0 0 50px #8133ff, inset 0 0 50px #8133ff;
+  text-shadow: 0 0 15px #8133ff;
+  color: #fff;
+  transition: 0.4s ease-in-out;
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+.foods-img {
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+}
+
+.logo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
+
+.img-logo {
+  width: 100px;
+  height: 100px;
+}
+
+.text-logo {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  text-shadow: 0 0 10px #8133ff, 0 0 10px #ff00c8 ;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #fff;
+}
+
+.item-price {
+  font-weight: bold;
+  color: #79cb15;
+}
